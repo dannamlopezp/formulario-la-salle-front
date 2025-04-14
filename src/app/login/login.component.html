@@ -1,0 +1,12 @@
+<div class="container">
+    <h2>Iniciar Sesión</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="correo">Correo electrónico</label>
+      <input type="email" [(ngModel)]="correo" name="correo" required />
+  
+      <label for="clave">Contraseña</label>
+      <input type="password" [(ngModel)]="clave" name="clave" required />
+  
+      <button type="submit">Ingresar</button>
+    </form>
+  </div>

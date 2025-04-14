@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>Formulario de Contacto</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="mensaje">Mensaje</label>
+      <textarea [(ngModel)]="mensaje" name="mensaje" rows="5" required></textarea>
+  
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </div>
