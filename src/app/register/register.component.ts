@@ -20,10 +20,11 @@ export class RegisterComponent {
 
   onSubmit() {
     const payload = {
-      nombre: this.nombre,
-      telefono: this.telefono,
-      correo: this.correo,
-      clave: this.clave
+      name: this.nombre,
+      phoneNumber: this.telefono,
+      email: this.correo,
+      password: this.clave,
+      lastName: ''
     };
 
     this.api.register(payload).subscribe({

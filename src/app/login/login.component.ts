@@ -18,7 +18,7 @@ export class LoginComponent {
   constructor(private api: FormService, private router: Router ) {}
 
   onSubmit() {
-    const payload = { correo: this.correo, clave: this.clave };
+    const payload = { email: this.correo, password: this.clave };
     this.api.login(payload).subscribe({
       next: (res: any) => {
         sessionStorage.setItem('authToken', res.token);

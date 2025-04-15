@@ -16,11 +16,14 @@ export class FormService {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json'
     });
-    return this.http.post('https://formulario-la-salle-api.onrender.com/api/login', data, { headers });
+    return this.http.post('http://localhost:3000/api/login', data, { headers });
   }
 
   register(data: any) {
-    return this.http.post('https://formulario-la-salle-api.onrender.com/api/register', data);
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    return this.http.post('http://localhost:3000/api/register', data, { headers });
   }
 
   sendMessage(data: any) {
@@ -29,6 +32,6 @@ export class FormService {
       'Content-Type': 'application/json',
       'Authorization': token
     });
-    return this.http.post('https://formulario-la-salle-api.onrender.com/api/contact', data);
+    return this.http.post('https://formulario-la-salle-api.onrender.com/api/contact', data, { headers });
   }
 }
